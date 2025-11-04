@@ -28,4 +28,12 @@
   <footer>
     <small>&copy; 2025 Pathfind.r by Levi Hood</small>
   </footer>
+
+  <script>
+    document.getElementById("start_button").addEventListener("click", () => {
+      const id = crypto.randomUUID()
+      localStorage.setItem("pathfindr_session", id);
+      location.href = "itinerary.html";
+    });
+  </script>
 </body>
