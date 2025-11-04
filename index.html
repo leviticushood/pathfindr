@@ -31,7 +31,7 @@
 
   <script>
     document.getElementById("start_button").addEventListener("click", () => {
-      const id = crypto.randomUUID()
+      const id = crypto.randomUUID();
       localStorage.setItem("pathfindr_session", id);
       location.href = "itinerary.html";
     });
