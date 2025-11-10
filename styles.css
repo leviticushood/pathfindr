@@ -3,18 +3,18 @@
 body {
   margin: 0;
   font-family: 'Arial', system-ui;
-  background: #141414;
+  background: #333333;
   color: white;
 }
 
 header {
-  background: #141414;
+  background: #999999;
   text-align: center;
   padding: 20px;
 
 header h1 {color: orange;}
 
-header p {colr: #bbb;}
+header p {color: white;}
 
 main {
   text-align: center;
@@ -22,10 +22,12 @@ main {
 }
 
 button {
-  background: gray;
+  background: #666666;
   color: white;
   padding: 10px;
   cursor: pointer;
 }
 
+footer {
+  
 
