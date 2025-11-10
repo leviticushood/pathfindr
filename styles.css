@@ -11,10 +11,8 @@ header {
   background: #141414;
   text-align: center;
   padding: 20px;
-  
-.container {
-  max-width: 1000px
-  margin: 0 auto;
-  padding: 16px;
+
+main {
   text-align: center;
 }
+
