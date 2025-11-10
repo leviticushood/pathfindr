@@ -6,5 +6,11 @@ body {
   background: #141414;
   color: #e7e7e7;
   line-height: 1.5;
-  font-size: 18px;
+}
+
+.container {
+  max-width: 1000px
+  margin: 0 auto;
+  padding: 16px;
+  text-align: centerl;
 }
