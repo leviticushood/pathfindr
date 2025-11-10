@@ -36,11 +36,12 @@ main {
 }
 
 button {
-  background: #666666;
+  background: ##ff9900;
   color: white;
   padding: 10px;
   cursor: pointer;
   border-radius: 5px;
+  border: none;
 }
 
 .trip-details {
