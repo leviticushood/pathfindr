@@ -12,9 +12,9 @@ header {
   text-align: center;
   padding: 20px;
 
-header h1 {
-  color: gray;
-}
+header h1 {color: gray;}
+
+header h2 {colr: #bbb;}
 
 main {
   text-align: center;
