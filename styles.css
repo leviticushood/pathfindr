@@ -12,9 +12,9 @@ header {
   text-align: center;
   padding: 20px;
 
-header h1 {color: #ff9900;}
+header h1 {color: #ff9900; }
 
-header p {color: white;}
+header p {color: white; }
 
 main {
   text-align: center;
@@ -29,5 +29,9 @@ button {
 }
 
 footer {
-  
+  background: #333333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
 
