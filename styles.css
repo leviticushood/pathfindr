@@ -26,6 +26,7 @@ header p { color: white; }
   transform: translateY(-50%);
   width: 140px;
   height: auto;
+  cursor: pointer;
 }
 
 main {
