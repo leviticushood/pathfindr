@@ -19,9 +19,12 @@ header h1 { color: #ff9900; }
 header p { color: white; }
 
 .logo {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
   width: 100px;
   height: auto;
-  margin: 0 auto 10px 0;
 }
 
 main {
