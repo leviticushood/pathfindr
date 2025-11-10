@@ -12,7 +12,14 @@ header {
   text-align: center;
   padding: 20px;
 
+header h1 {
+  color: gray;
+}
+
 main {
   text-align: center;
+  padding: 20px;
 }
+
+
 
