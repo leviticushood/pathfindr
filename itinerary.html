@@ -69,5 +69,22 @@
   <footer>
     <small>&copy; 2025 Pathfind.r by Levi Hood</small>
   </footer>
+
+  <script>
+  const next_button = document.getElementById('next_button');
+  const back_button = document.getElementById('back_button');
+  const trip_section = document.querySelector('.trip-details');
+  const itinerary_section = document.querySelector('.itinerary-section');
+
+  next_button.addEventListener('click', () => {
+    trip_section.style.display = 'none';
+    itinerary_section.style.display = 'block';
+  });
+
+  back_button.addEventListener('click', () => {
+    itinerary_section.style.display = 'none';
+    trip_section.style.display = 'block';
+  });
+</script>
   
 </body>
