@@ -95,6 +95,13 @@
     const saved_trip = localStorage.getItem('trip_details');
     if (saved_trip) {
       const trip_data = { destination, start_date, end_date, notes } = JSON.parse(saved_trip);
+      document.getElementById('destination').value = destination || '';
+      document.getElementById('start-date').value = start_date || '';
+      document.getElementById('end-date').value = end_date || '';
+      document.getElementById('notes').value = notes || '';
+    }
+  });
+      
 
   back_button.addEventListener('click', () => {
     itinerary_section.style.display = 'none';
