@@ -96,6 +96,12 @@
   const trip_section = document.querySelector('.trip-details');
   const itinerary_section = document.querySelector('.itinerary-section');
 
+// get reference to input fields
+  const destination_input = document.getElementById('destination');
+  const start_date_input = document.getElementById('start-date');
+  const end_date_input = document.getElementById('end-date');
+  const notes_input = document.getElementById('notes');
+
 // When Next is clicked (input values)    
   next_button.addEventListener('click', () => {
     const destination = document.getElementById('destination').value;
