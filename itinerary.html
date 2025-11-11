@@ -113,7 +113,8 @@
     trip_section.style.display = 'none';
     itinerary_section.style.display = 'block';
   });
-
+  
+// check for saved data in local storage
   window.addEventListener('load', () => {
     const saved_trip = localStorage.getItem('trip_details');
     if (saved_trip) {
@@ -124,7 +125,8 @@
       document.getElementById('notes').value = notes || '';
     }
   });
-      
+
+// when back is clicked
   back_button.addEventListener('click', () => {
     itinerary_section.style.display = 'none';
     trip_section.style.display = 'block';
