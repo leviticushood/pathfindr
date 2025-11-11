@@ -91,6 +91,9 @@
     itinerary_section.style.display = 'block';
   });
 
+  window.addEventListener('load', () => {
+    const saved_trip = localStorage.getItem('trip_details');
+
   back_button.addEventListener('click', () => {
     itinerary_section.style.display = 'none';
     trip_section.style.display = 'block';
