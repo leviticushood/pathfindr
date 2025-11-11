@@ -35,6 +35,10 @@ main {
   background: #333333;
 }
 
+main p {
+  max-width: 1000px;
+}
+
 button {
   background: #ff9900;
   color: #000000;
