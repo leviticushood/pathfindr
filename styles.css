@@ -15,7 +15,7 @@ header {
   font-family: 'Poppins', sans-serif;
 }
 
-header h1 { color: #ff9900; }
+header h1 { color: #f57705; }
 
 header p { color: white; }
 
@@ -41,7 +41,7 @@ main p {
 }
 
 button {
-  background: #ff9900;
+  background: #f57705;
   color: #000000;
   padding: 10px;
   cursor: pointer;
