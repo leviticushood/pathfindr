@@ -84,7 +84,7 @@
     const end_date = document.getElementById('end-date').value;
     const notes = document.getElementById('notes').value;
 
-    const trip_data = { destination, star_date, end_date, notes };
+    const trip_data = { destination, start_date, end_date, notes };
     localStorage.setItem('trip_details', JSON.stringify(trip_data));
     
     trip_section.style.display = 'none';
@@ -93,6 +93,8 @@
 
   window.addEventListener('load', () => {
     const saved_trip = localStorage.getItem('trip_details');
+    if (saved_trip) {
+      const trip_data = { destination, start_date, end_date, notes } = JSON.parse(saved_trip);
 
   back_button.addEventListener('click', () => {
     itinerary_section.style.display = 'none';
