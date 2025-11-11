@@ -102,6 +102,26 @@
     const start_date = document.getElementById('start-date').value;
     const end_date = document.getElementById('end-date').value;
     const notes = document.getElementById('notes').value;
+
+// get reference to preview fields
+  const preview_destination = document.getElementById('previewDestination');
+  const preview_start = document.getElementById('previewStart');
+  const preview_end = document.getElementById('previewEnd');
+  const preview_notes = document.getElementById('previewNotes');
+
+// update preview box in real-time
+  function update_preview() {
+    preview_destination.textContent = destination_input.value || '-';
+    preview_start.textContent = start_date_input.value || '-';
+    preview_end.textContent = end_date_input.value || '-';
+    preview_notes.textContent = notes_input.value || '-';
+  }
+
+// listen for input changes and update preview
+  destination_input.addEventListener('input', update_preview);
+  start_date_input.addEventListener('input', update_preview);
+  end_date_input.addEventListener('input', update_preview);
+  notes_input.addEventListener('input', update_preview);
     
 // consolidate values into object    
     const trip_data = { destination, start_date, end_date, notes };
