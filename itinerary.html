@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="styles.css" />
 
   <!-- PRINT/PDF -->
+  
   <style>
     @media print {
       header, .controls, .form-grid, .actions { display: none !important; }
@@ -29,7 +30,9 @@
   </header>
 
   <main>
+    
     <!-- Step 1-->
+    
     <section class="trip-details">
       <h2>Trip Details</h2>
       <form>
@@ -50,6 +53,7 @@
     </section>
 
     <!-- Live Preview-->
+    
     <div id="trip_preview" class="preview-box">
       <h3>Trip Preview</h3>
       <p><strong>Destination:</strong> <span id="previewDestination">-</span> </p>
@@ -60,6 +64,7 @@
       
 
     <!-- Step 2 -->
+    
     <section class="itinerary-section" style="display: none;">
       <h2>Daily Schedule</h2>
       <form>
@@ -81,19 +86,25 @@
   <footer>
     <small>&copy; 2025 Pathfind.r by Levi Hood</small>
   </footer>
+  
 <!-- JS (underscores)-->
+  
   <script>
   const next_button = document.getElementById('next_button');
   const back_button = document.getElementById('back_button');
   const trip_section = document.querySelector('.trip-details');
   const itinerary_section = document.querySelector('.itinerary-section');
 
+// When Next is clicked (input values)
+    
   next_button.addEventListener('click', () => {
     const destination = document.getElementById('destination').value;
     const start_date = document.getElementById('start-date').value;
     const end_date = document.getElementById('end-date').value;
     const notes = document.getElementById('notes').value;
-
+    
+// consolidate values into object
+    
     const trip_data = { destination, start_date, end_date, notes };
     localStorage.setItem('trip_details', JSON.stringify(trip_data));
     
