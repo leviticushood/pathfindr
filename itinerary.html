@@ -79,6 +79,14 @@
   const itinerary_section = document.querySelector('.itinerary-section');
 
   next_button.addEventListener('click', () => {
+    const destination = document.getElementById('destination').value;
+    const start_date = document.getElementById('start-date').value;
+    const end_date = document.getElementById('end-date').value;
+    const notes = document.getElementById('notes').value;
+
+    const trip_data = { destination, star_date, end_date, notes };
+    localStorage.setItem('trip_details', JSON.stringify(trip_data));
+    
     trip_section.style.display = 'none';
     itinerary_section.style.display = 'block';
   });
