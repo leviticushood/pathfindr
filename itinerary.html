@@ -189,7 +189,14 @@ function render_itinerary() {
     itinerary_list.innerHTML = "<p>No activities added yet.</p>";
     return;
   }
-  
+
+  // for each item in items, run the function to create a paragraph of those items
+    items.forEach((item, index) => {
+    const p = document.createElement("p");
+    p.textContent = `${item.day} — ${item.time} — ${item.activity}`;
+    itinerary_list.appendChild(p);
+  });
+}
 </script>
   
 </body>
