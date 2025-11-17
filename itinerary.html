@@ -178,8 +178,17 @@
   function save_itinerary(items) {
     localStorage.setItem('itinerary_items', JSON.stringify(items));
   }
-  
-    
+
+// render itinerary
+function render_itinerary() {
+  const items = load_itinerary();
+
+  itinerary_list.innerHTML = "";
+
+  if (items.length === 0) {
+    itinerary_list.innerHTML = "<p>No activities added yet.</p>";
+    return;
+  }
   
 </script>
   
