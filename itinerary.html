@@ -172,6 +172,13 @@
   function load_itinerary() {
     const stored = localStorage.getItem('itinerary_items');
     return stored ? JSON.parse(stored) : [];
+  }
+
+// save itinerary
+  function save_itinerary(items) {
+    localStorage.setItem('itinerary_items', JSON.stringify(items));
+    
+  
 </script>
   
 </body>
