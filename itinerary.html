@@ -197,6 +197,35 @@ function render_itinerary() {
     itinerary_list.appendChild(p);
   });
 }
+
+  // add new item
+document.getElementById("back_button").insertAdjacentHTML(
+  "beforebegin",
+  `<button type="button" id="add_item">Add Activity</button>`
+);
+
+const add_item_btn = document.getElementById("add_item");
+
+add_item_btn.addEventListener("click", () => {
+  const day = day_input.value.trim();
+  const activity = activity_input.value.trim();
+  const time = time_input.value;
+
+  if (!day || !activity || !time) {
+    alert("Please fill all fields.");
+    return;
+  }
+
+  const items = load_itinerary();
+  items.push({ day, activity, time });
+  save_itinerary(items);
+
+  // Reset inputs
+  activity_input.value = "";
+  time_input.value = "";
+
+  render_itinerary();
+});
 </script>
   
 </body>
