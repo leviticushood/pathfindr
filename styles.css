@@ -52,21 +52,12 @@ button {
   margin: 20px;
 }
 
-.trip-details {
-  background: #000000;
-  color: white;
-  max-width:1000px;
-  margin: 40 px auto;
-  padding: 20px;
-  border-radius: 10px;
-  margin-bottom: 40px;
-}
-
+.trip-details,
 .itinerary-section {
   background: #000000;
   color: white;
   max-width:1000px;
-  margin: 40 px auto;
+  margin: 40px auto;
   padding: 20px;
   border-radius: 10px;
   margin-bottom: 40px;
