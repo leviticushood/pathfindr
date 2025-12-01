@@ -306,6 +306,16 @@ function clear_itinerary() {
   render_itinerary(); // refresh the preview to show it's empty
 }
 
+// download ICS function
+function download_ics() {
+  const items = load_itinerary();
+
+  if (!items || items.length === 0) {
+    alert("No activities to export yet.");
+    return;
+  }
+
+
   // add new item
 document.getElementById("back_button").insertAdjacentHTML(
   "beforebegin",
