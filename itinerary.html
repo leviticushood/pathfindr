@@ -200,8 +200,12 @@
 // pull day number
   function get_day_number(str) {
     const m = str.match(/\d+/);
-    return m ? +m[0] : 000;
-  }
+    if (m) {
+      return +m[0];
+    } else {
+      return 999;
+    }
+
   
 // render itinerary
 function render_itinerary() {
