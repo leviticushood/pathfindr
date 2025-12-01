@@ -315,6 +315,12 @@ function download_ics() {
     return;
   }
 
+  let tripName = destination_input.value.trim();
+  if (!tripName) {
+    tripName = "Pathfind.r Trip";
+  }
+  
+
 
   // add new item
 document.getElementById("back_button").insertAdjacentHTML(
