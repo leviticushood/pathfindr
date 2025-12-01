@@ -241,6 +241,7 @@
 // render itinerary
 function render_itinerary() {
   const items = load_itinerary();
+  const itinerary_list = document.getElementById("itinerary_list");
 // sort by day number, then by time
   items.sort((a, b) => {
     const dayA = get_day_number(a.day);
