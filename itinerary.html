@@ -285,7 +285,7 @@ function render_itinerary() {
       // paragraph
       const p = document.createElement("p");
       p.className = "itinerary-activity";
-      p.textContent = `${item.day} — ${item.time} — ${item.activity}`;
+      p.textContent = `${item.day} : ${item.time} ( ${item.activity} )` ;
       // delete button
       const delBtn = document.createElement("button");
       delBtn.type = "button";
