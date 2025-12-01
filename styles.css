@@ -93,3 +93,11 @@ section {
 .itinerary-activity {
   flex: 1;
 }
+
+.day-heading {
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin: 16px 0 4px;
+}
+
