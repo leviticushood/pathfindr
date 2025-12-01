@@ -370,6 +370,10 @@ END:VCALENDAR`;
   a.click();
   URL.revokeObjectURL(url);  
 }
+
+  // wired ICS download button
+  ics_button.addEventListener("click", download_ics);
+
   // add new item
 document.getElementById("back_button").insertAdjacentHTML(
   "beforebegin",
