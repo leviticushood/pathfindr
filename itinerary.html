@@ -302,8 +302,17 @@ function render_itinerary() {
 }
 // clear whole itinerary
 function clear_itinerary() {
-  localStorage.removeItem("itinerary"); // delete saved trip data
-  render_itinerary(); // refresh the preview to show it's empty
+  localStorage.removeItem("trip_details");
+  localStorage.removeItem("itinerary_items");
+
+  // reset inputs
+  destination_input.value = "";
+  start_date_input.value = "";
+  end_date_input.value = "";
+  notes_input.value = "";
+
+  update_preview();
+  render_itinerary();
 }
 
 // download ICS function
