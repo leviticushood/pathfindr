@@ -93,6 +93,10 @@ section {
   margin: 0;
 }
 
+.itinerary-row-text {
+  font-size: 0.95rem;
+}
+
 .itinerary-activity {
   flex: 1;
 }
