@@ -183,6 +183,7 @@
 function render_itinerary() {
   const items = load_itinerary();
 
+  // clear list
   itinerary_list.innerHTML = "";
 
   if (items.length === 0) {
@@ -192,9 +193,18 @@ function render_itinerary() {
 
   // for each item in items, run the function to create a paragraph of those items
     items.forEach((item, index) => {
-    const p = document.createElement("p");
-    p.textContent = `${item.day} — ${item.time} — ${item.activity}`;
-    itinerary_list.appendChild(p);
+      // row
+      const row = document.createElement("div");
+      row.className = "itinerary-row";
+      // paragraph
+      const p = document.createElement("p");
+      p.textContent = `${item.day} — ${item.time} — ${item.activity}`;
+      // delete button
+      const deleBtn = document.createElement("button");
+      
+      
+    
+      itinerary_list.appendChild(p);
   });
 }
 
