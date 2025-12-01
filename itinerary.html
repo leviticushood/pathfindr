@@ -141,7 +141,11 @@
     const start_date = document.getElementById('start-date').value;
     const end_date = document.getElementById('end-date').value;
     const notes = document.getElementById('notes').value;
-    
+
+//print button response
+  print_button.addEventListener('click', () => {
+    window.print();
+  });
 // consolidate values into object    
     const trip_data = { destination, start_date, end_date, notes };
 
