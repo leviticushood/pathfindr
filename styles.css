@@ -91,6 +91,7 @@ section {
 
 .itinerary-row p {
   margin: 0;
+  text-align: left;
 }
 
 .itinerary-row-text {
@@ -99,6 +100,7 @@ section {
 
 .itinerary-activity {
   flex: 1;
+  text-align: left;
 }
 
 .day-heading {
