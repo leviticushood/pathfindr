@@ -160,10 +160,6 @@
     const end_date = document.getElementById('end-date').value;
     const notes = document.getElementById('notes').value;
 
-//print button response
-  print_button.addEventListener('click', () => {
-    window.print();
-  });
 // consolidate values into object    
     const trip_data = { destination, start_date, end_date, notes };
 
@@ -373,7 +369,10 @@ END:VCALENDAR`;
 
   // wired ICS download button
   ics_button.addEventListener("click", download_ics);
-
+//print button response
+  print_button.addEventListener('click', () => {
+    window.print();
+  }
   // add new item
 document.getElementById("back_button").insertAdjacentHTML(
   "beforebegin",
