@@ -282,13 +282,26 @@ function render_itinerary() {
     return;
   }
 
+    let lastDay = null;
   // for each item in items, run the function to create a paragraph of those items
     items.forEach((item, index) => {
+       const dayLabel = item.day || "";
+
+      // new day header if the day changed
+      if (dayLabel !== lastDay) {
+        const header = document.createElement("p");
+        header.className = "itinerary-day-header";
+        header.textContent = dayLabel;
+        itinerary_list.appendChild(header);
+        lastDay = dayLabel;
+      }
+
       // row
       const row = document.createElement("div");
       row.className = "itinerary-row";
       // paragraph
       const p = document.createElement("p");
+      p.className = "itinerary-activity";
       p.textContent = `${item.day} — ${item.time} — ${item.activity}`;
       // delete button
       const delBtn = document.createElement("button");
