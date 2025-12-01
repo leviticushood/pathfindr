@@ -90,3 +90,6 @@ section {
   margin: 0;
 }
 
+.itinerary-activity {
+  flex: 1;
+}
