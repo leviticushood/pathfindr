@@ -13,13 +13,6 @@
   <style>
     @media print {
    
-      body {
-        background: #ffffff;
-        color: #000000;
-        font-size: 12pt;
-        margin: 0.75in;
-      }
-
       header, footer, button,
       .export-actions {
         display: none !important;
@@ -29,36 +22,16 @@
       .itinerary-section form {
         display: none !important;
       }
-        .trip-details,
-        .itinerary-section {
-          display: block !important;
-          margin-bottom: 0.4in;
-        }
-      
-      .preview-box {
-        box-shadow: none !important;
-        border: none !important;
-        padding: 0;
-        margin: 0 0 1rem 0;
-      }
-      .itinerary-day-header {
-        font-weight: 700;
-        margin-top: 12px;
-        margin-bottom: 4px;
-      }
-      
-      .itinerary-activity {
-        margin: 0 0 4px 10px;
-      }
-      .itinerary-row {
-        display: block;
-        border-bottom: 1px solid #ccc;
-        padding: 4px 0;
-      }
 
-    .itinerary-row button {
-      display: none !important;
-    }
+      .itinerary-row button {
+        display: none !important;
+      }
+      #trip_preview,
+      #trip_preview *,
+      #itinerary_output,
+      #itinerary_output * {
+        color: #000 !important;
+      }
     }
   </style>
 </head>
