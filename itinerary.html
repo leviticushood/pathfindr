@@ -104,6 +104,7 @@
       <div class="export-actions">
         <button type="button" id="print_button">Print / Save PDF</button>
         <button type="button" id="ics_button">Download Calendar Reminder (.ics)</button>
+        <button type="button" id="clear_trip_button">Clear Trip</button>
       </div>
     </section>
     
@@ -299,6 +300,11 @@ function render_itinerary() {
       itinerary_list.appendChild(row);
   });
 }
+// clear whole itinerary
+function clear_itinerary() {
+  localStorage.removeItem("itinerary"); // delete saved trip data
+  render_itinerary(); // refresh the preview to show it's empty
+}
 
   // add new item
 document.getElementById("back_button").insertAdjacentHTML(
@@ -306,6 +312,12 @@ document.getElementById("back_button").insertAdjacentHTML(
   `<button type="button" id="add_item">Add Activity</button>`
 );
 
+document.getElementById("clear_trip_button").addEventListener("click", () => {
+  if (confirm("Are you sure you want to clear your entire trip?")) {
+    clear_itinerary();
+  }
+});
+  
 const add_item_btn = document.getElementById("add_item");
 
 add_item_btn.addEventListener("click", () => {
