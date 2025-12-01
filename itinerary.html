@@ -315,11 +315,20 @@ function download_ics() {
     return;
   }
 
+  // name trip for ICS
   let tripName = destination_input.value.trim();
   if (!tripName) {
     tripName = "Pathfind.r Trip";
   }
-  
+
+  //trip description
+  let description = "";
+  items.forEach((item, index) => {
+    if (index > 0) {
+      description += "\\n"; // newline for ICS
+    }
+    description += `${item.day} ${item.time} - ${item.activity}`;
+  });
 
 
   // add new item
