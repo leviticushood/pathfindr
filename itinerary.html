@@ -210,14 +210,21 @@
 // render itinerary
 function render_itinerary() {
   const items = load_itinerary();
-  // sort by day and time
-  items.sort((a,b) => {
-    if (a.day < b.day) return -1;
-    if (a.day > b.day) return 1;
+// sort by day number, then by time
+  items.sort((a, b) => {
+    const dayA = get_day_number(a.day);
+    const dayB = get_day_number(b.day);
+  
+    if (dayA !== dayB) {
+      return dayA - dayB; // smaller day first
+    }
+  
+    // if same day, sort by time
     if (a.time < b.time) return -1;
     if (a.time > b.time) return 1;
     return 0;
-  }); 
+  });
+
       
   // clear list
   itinerary_list.innerHTML = "";
