@@ -199,7 +199,15 @@
 // render itinerary
 function render_itinerary() {
   const items = load_itinerary();
-
+  // sort by day and time
+  items.sort((a,b) => {
+    if (a.day < b.day) return -1;
+    if (a.day > b.day) return 1;
+    if (a.time < b.time) return -1;
+    if (a.time > b.time) return 1;
+    return 0;
+  }); 
+      
   // clear list
   itinerary_list.innerHTML = "";
 
