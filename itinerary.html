@@ -330,6 +330,36 @@ function download_ics() {
     description += `${item.day} ${item.time} - ${item.activity}`;
   });
 
+  //reformat time data for ICS
+  const now = new Date();
+  const later = new Date(now.getTime() + 60 * 60 * 1000);
+  const dtstart = now.toISOString().replace(/[-:]/g, "").split(".")[0];
+  const dtend = later.toISOString().replace(/[-:]/g, "").split(".")[0];
+  const dtstamp = dtstart;
+
+  // create ICS file text
+  const ics =
+`BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Pathfindr//EN
+BEGIN:VEVENT
+UID:${Date.now()}@pathfindr
+DTSTAMP:${dtstamp}
+DTSTART:${dtstart}
+DTEND:${dtend}
+SUMMARY:${tripName}
+DESCRIPTION:${description}
+END:VEVENT
+END:VCALENDAR`;
+
+  // download ICS
+  const blob = new Blob([ics], { type: "text/calendar;charset=utf-8" });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = "pathfindr-trip.ics";
+  a.click();
+  URL.revokeObjectURL(url);  
 
   // add new item
 document.getElementById("back_button").insertAdjacentHTML(
