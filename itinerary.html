@@ -165,8 +165,14 @@
 // delete item
   itinerary_list.addEventListener("click", (event) => {
     if (event.target.matches(".delete-item")) {
-      
+      const index = Number(event.target.dataset.index);
+      const items = load_itinerary();
+      items.splice(index,1); //removes one activity
+      save_itinerary(items);
+      render_itinerary(); //update itin
+    }
 
+  });
 
 
   
