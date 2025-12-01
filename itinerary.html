@@ -200,10 +200,14 @@ function render_itinerary() {
       const p = document.createElement("p");
       p.textContent = `${item.day} — ${item.time} — ${item.activity}`;
       // delete button
-      const deleBtn = document.createElement("button");
+      const delBtn = document.createElement("button");
+      delBtn.type = "button";
+      delBtn.className = "delete-item";
+      delBtn.dataset.index = index;
+      delBtn.textContent = "Delete";
       
-      
-    
+      row.appendChild(text);
+      row.appendChild(delBtn);
       itinerary_list.appendChild(p);
   });
 }
