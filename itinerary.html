@@ -163,6 +163,13 @@
     trip_section.style.display = 'block';
   });
 
+  
+// select inputs
+  const day_input = document.getElementById('day');
+  const activity_input = document.getElementById('activity');
+  const time_input = document.getElementById('time');
+  const itinerary_list = document.getElementById('itinerary_list');
+
 // delete item
   itinerary_list.addEventListener("click", (event) => {
     if (event.target.matches(".delete-item")) {
@@ -174,15 +181,7 @@
     }
 
   });
-
-
   
-// select inputs
-  const day_input = document.getElementById('day');
-  const activity_input = document.getElementById('activity');
-  const time_input = document.getElementById('time');
-  const itinerary_list = document.getElementById('itinerary_list');
-
 // load existing itinerary
   function load_itinerary() {
     const stored = localStorage.getItem('itinerary_items');
